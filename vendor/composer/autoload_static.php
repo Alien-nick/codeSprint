@@ -293,6 +293,7 @@ class ComposerStaticInitc29e2a84a3f55441de47d64679546a85
 
     public static $classMap = array (
         'App\\Buyers' => __DIR__ . '/../..' . '/app/Buyers.php',
+        'App\\Comments' => __DIR__ . '/../..' . '/app/Comments.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Farmers' => __DIR__ . '/../..' . '/app/Farmers.php',
@@ -303,6 +304,7 @@ class ComposerStaticInitc29e2a84a3f55441de47d64679546a85
         'App\\Http\\Controllers\\BuyersController' => __DIR__ . '/../..' . '/app/Http/Controllers/BuyersController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\FarmersController' => __DIR__ . '/../..' . '/app/Http/Controllers/FarmersController.php',
+        'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',

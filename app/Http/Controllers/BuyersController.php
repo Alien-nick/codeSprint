@@ -117,7 +117,8 @@ class BuyersController extends Controller
         $post->crop_type = $request->input('crop_type');
         $post->order_quantity = $request->input('order_quantity');
         $post->end_date_of_order = date('Y-m-d', strtotime($request->end_date_of_order));
-        $post->order_status = $request->input('order_status');
+        $post->order_status = 'approved';
+        $post->user_id = auth()->id();
         $post->save();
         return $this->index();
     }

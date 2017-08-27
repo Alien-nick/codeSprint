@@ -15,6 +15,33 @@
       <input type="submit" onclick="return confirmDelete()" name="delete" value="Delete" class="btn btn-danger">
     </form>
     @endif
+
+    <div class="comments">
+            <ul class="list-group">
+              @foreach($buyers->comments as $comment)
+              @if(auth()->id() == $comment->user_id)
+              <small><a href="#" class="btn btn-primary">Edit</a></small>
+                <li class="list-group-item">{{$comment->body}} <br> created on {{$comment->created_at}}</li> <br>
+                @endif
+              @endforeach
+            </ul>
+    </div>
+
+
+
+<hr>
+    <div class="card">
+          <div class="card-block">
+                <form class="form-group" action="/Buyers/{{$buyers->id}}/comments" method="post">
+                  {{csrf_field()}}
+                      <textarea name="body" placeholder="Your Comment Here" class="form-control" rows="4" columns="75"></textarea>
+                      <br>
+                      <input type="submit" name="submit" value="Post Comment" class=" btn btn-primary">
+                </form>
+              </div>
+
+
+
     @endsection
 
 <script type="text/javascript">

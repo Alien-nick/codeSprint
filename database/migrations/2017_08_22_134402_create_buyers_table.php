@@ -23,12 +23,13 @@ class CreateBuyersTable extends Migration
         });
 
         Schema::create('demands', function (Blueprint $table){
-            $table->increments('did');
+            $table->increments('id');
             $table->integer('order_quantity');
             $table->string('crop_type');
             $table->date('start_date_of_order');
             $table->date('end_date_of_order');
             $table->string('order_status');
+            $table->integer('user_id');
         });
     }
 
