@@ -21,8 +21,11 @@
               @foreach($buyers->comments as $comment)
               @if(auth()->id() == $comment->user_id)
               <small><a href="#" class="btn btn-primary">Edit</a></small>
+              <small><a href="#" class="btn btn-danger">Delete</a></small>
+              @endif
+                <li class="list-group-item"><h4><u style="color:blue;">{{$comment->user->name}}</u></h4></li>
                 <li class="list-group-item">{{$comment->body}} <br> created on {{$comment->created_at}}</li> <br>
-                @endif
+
               @endforeach
             </ul>
     </div>

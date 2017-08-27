@@ -20,8 +20,11 @@
               <?php $__currentLoopData = $buyers->comments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $comment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <?php if(auth()->id() == $comment->user_id): ?>
               <small><a href="#" class="btn btn-primary">Edit</a></small>
+              <small><a href="#" class="btn btn-danger">Delete</a></small>
+              <?php endif; ?>
+                <li class="list-group-item"><h4><u style="color:blue;"><?php echo e($comment->user->name); ?></u></h4></li>
                 <li class="list-group-item"><?php echo e($comment->body); ?> <br> created on <?php echo e($comment->created_at); ?></li> <br>
-                <?php endif; ?>
+
               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </ul>
     </div>
