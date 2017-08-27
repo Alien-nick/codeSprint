@@ -159,11 +159,11 @@ color:white;
 
                     <ul class="nav nav-pills">
                      <li class="nav-item float-sm-left">
-                        <a class="btn btn-outline-light btn-sm" href="/farmers/login" class="nav-link">Login as Farmer</a>
+                        <a class="btn btn-outline-light btn-sm" href="Farmers/login" class="nav-link">Login as Farmer</a>
                     </li>
                         &nbsp&nbsp
                      <li class="nav-item float-sm-right">
-                        <a class="btn btn-outline-light btn-sm" href="/buyers/login" class="nav-link">Login as Buyer</a>
+                        <a class="btn btn-outline-light btn-sm" href="Buyers/login" class="nav-link">Login as Buyer</a>
                     </li>
                     </ul>
 
@@ -256,7 +256,7 @@ color:white;
                                              Not a farmer?
                                                       </div>
                                                       <div class="col-lg-3">
-                                             <a class="btn btn-outline-light btn-sm" href="/buyers/register"> Click Here</a>
+                                             <a class="btn btn-outline-light btn-sm" href="Buyers/create_buyer"> Click Here</a>
                                                     </div>
                                                   </div>
                                                   </div>

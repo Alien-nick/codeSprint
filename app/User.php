@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Buyers;
+use App\Farmers;
 
 class User extends Authenticatable
 {
@@ -15,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'status', 'contact', 'address',
     ];
 
     /**
@@ -26,4 +28,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function demands()
+    {
+      return  $this->hasMany(Buyers::class);
+    }
+
+    public function crops()
+    {
+      return $this->hasMany(Farmers::class);
+    }
 }

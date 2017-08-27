@@ -12,7 +12,7 @@
    <h1 class="animated bounceInDown" style="color:white; text-align:center;"> Create new Demand<h1>
  </div>
 <h4> Crop Name: </h4>
-<input class="form-control" type="text" name="crop_name" placeholder="Crop Name">
+<input class="form-control" type="text" name="crop_type" placeholder="Crop Name">
 
 
  <br>

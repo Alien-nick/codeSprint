@@ -12,5 +12,6 @@
             <input type="submit" name="bid" value="bid" class="btn btn-primary"> <hr>
 
         @endforeach
+        {{$demands->links()}}
 
     @endsection

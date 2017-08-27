@@ -108,4 +108,6 @@ class FarmersController extends Controller
       $inStocks->delete();
       return $this->index();
     }
+
+  
 }

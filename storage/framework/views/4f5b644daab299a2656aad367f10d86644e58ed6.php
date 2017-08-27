@@ -20,9 +20,9 @@
             <li><a href="welcome/seller"><i class="fa fa-money" aria-hidden="true"></i> Sellers </a></li>
 
 
-
+              <?php if(Auth::check()): ?>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"> </i> Settings <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"> </i> Welcome <?php echo e(Auth::user()->name); ?> <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
                           <li><a href="#"></a></li>
                           <li><a href="#">Another action</a></li>
@@ -30,9 +30,10 @@
                           <li class="divider"></li>
                           <li><a href="#">Separated link</a></li>
                           <li class="divider"></li>
-                          <li><a href="#">Logout</a></li>
+                          <li><a href="/logout">Logout</a></li>
                       </ul>
                 </li>
+              <?php endif; ?>
         </ul>
         <form class="navbar-form navbar-left" role="search">
             <div class="form-group">

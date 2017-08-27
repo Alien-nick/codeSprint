@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class Buyers extends Model
 {
@@ -16,4 +17,10 @@ class Buyers extends Model
                           'end_date_of_order',];
 
     protected $table = 'demands';
+
+    public function user()
+    {
+      return $this->belongsTo(User::class);
+    }
+
 }

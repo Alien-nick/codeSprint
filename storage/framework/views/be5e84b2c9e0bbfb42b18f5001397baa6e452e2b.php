@@ -8,6 +8,8 @@
             <input type="submit" name="bid" value="bid" class="btn btn-primary"> <hr>
 
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <?php echo e($demands->links()); ?>
+
 
     <?php $__env->stopSection(); ?>
 

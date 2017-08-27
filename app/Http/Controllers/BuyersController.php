@@ -5,11 +5,19 @@ namespace App\Http\Controllers;
 use App\Farmers;
 use App\Buyers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Redirect;
 
 class BuyersController extends Controller
 {
+
+    public function __construct()
+    {
+      $this->middleware('auth')->except(['index', 'show']);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +25,7 @@ class BuyersController extends Controller
      */
     public function index()
     {
-        $demands = Buyers::all();
+        $demands = Buyers::orderBy('id', 'desc')->paginate(5);;
         return view('Buyers.index')->with('demands',$demands);
     }
 
@@ -43,12 +51,14 @@ class BuyersController extends Controller
         $input = Input::all();
         $demands = new Buyers;
         //$bid->user_id = Input::get('userId');
-        $demands->crop_name = Input::get('crop_name');
+        $demands->crop_type = Input::get('crop_type');
         $demands->order_quantity = Input::get('order_quantity');
         $demands->start_date_of_order = date('Y-m-d', strtotime(Input::get('start_date_of_order')));
         $demands->end_date_of_order = date('Y-m-d', strtotime(Input::get('end_date_of_order')));
+        $demands->user_id = auth()->id();
+        $demands->order_status = 'approved';
         $demands->save();
-        return redirect::route('Buyers.index');
+        return $this->index();
     }
 
     /**

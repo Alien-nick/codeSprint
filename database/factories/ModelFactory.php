@@ -24,12 +24,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Buyers::class, function (Faker\Generator $faker) {
-    static $password;
 
     return [
-        'name' => $faker->sentence,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+        'crop_type' => $faker->name,
+        'order_quantity' => 30,
+        'start_date_of_order' => date('Y-m-d', strtotime('2017-08-31')),
+        'end_date_of_order' => date('Y-m-d', strtotime('2017-08-31')),
+        'order_status' => 'approved'
     ];
 });

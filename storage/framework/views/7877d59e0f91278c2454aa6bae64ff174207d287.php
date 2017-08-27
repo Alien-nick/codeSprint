@@ -3,14 +3,17 @@
       <h2 style="color:white;"><?php echo e($buyers->crop_type); ?></h2>
       <h3 style="color:white;"><?php echo e($buyers->order_quantity); ?></h3>
       <h4 style="color:white;"><?php echo e($buyers->end_date_of_order); ?></h4>
+      <h5 style="color:white;">created by: <?php echo e($buyers->user->name); ?></h5>
       <h5 style="color:white;"><?php echo e($buyers->order_status); ?></h5>
+      <?php if(auth()->id() == $buyers->user_id): ?>
       <a href="/Buyers/<?php echo e($buyers->id); ?>/edit" class="btn btn-success">Edit</a> <br>
-      <form class="form" role="form" method="POST" action="<?php echo e(url('/Buyers/'. $buyers->id)); ?>">
+      <form class="form" role="form" method="delete" action="<?php echo e(url('/Buyers/'. $buyers->id)); ?>">
                           <input type="hidden" name="_method" value="delete">
                           <?php echo e(csrf_field()); ?>
 
       <input type="submit" onclick="return confirmDelete()" name="delete" value="Delete" class="btn btn-danger">
     </form>
+    <?php endif; ?>
     <?php $__env->stopSection(); ?>
 
 <script type="text/javascript">
