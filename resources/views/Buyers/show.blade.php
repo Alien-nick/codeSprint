@@ -7,7 +7,7 @@
       <h4 style="color:white;">{{ $buyers->end_date_of_order}}</h4>
       <h5 style="color:white;">created by: {{ $buyers->user->name}}</h5>
       <h5 style="color:white;">{{ $buyers->order_status}}</h5>
-      @if(auth()->id() == $buyers->user_id)
+      @if(Auth::user()->adminOrCurrentUserOwns($buyers))
       <a href="/Buyers/{{$buyers->id}}/edit" class="btn btn-success">Edit</a> <br>
       <form class="form" role="form" method="delete" action="{{ url('/Buyers/'. $buyers->id) }}">
                           <input type="hidden" name="_method" value="delete">

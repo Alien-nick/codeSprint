@@ -4,12 +4,13 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Http\AuthTraits\OwnsRecord;
 use App\Buyers;
 use App\Farmers;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, OwnsRecord;
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'status', 'contact', 'address',
+        'name', 'email', 'password', 'status', 'contact', 'address','is_admin', 'status_id',
     ];
 
     /**
@@ -43,4 +44,6 @@ class User extends Authenticatable
     {
       return $this->hasMany(Comments::class);
     }
+
+    
 }

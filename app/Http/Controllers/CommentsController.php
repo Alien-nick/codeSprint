@@ -16,7 +16,7 @@ class CommentsController extends Controller
             'user_id' => auth()->id(),
             'buyers_id' => $buyers->id
         ]);
-
+        alert()->success('Congrats!', 'You successfully Made a Comment');
         return back();
 
     }

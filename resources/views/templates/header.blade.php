@@ -19,7 +19,8 @@
         </div> <!-- /container -->
 
       @include('templates.scripts')
-
+      @include('Alerts::show')
+      @yield('scripts')
 
 </body>
 </html>

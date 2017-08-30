@@ -28,7 +28,7 @@ class UsersController extends Controller
         'password' => bcrypt(request('password'))
       ]);
 
-
+      alert()->success('Congrats!', 'You successfully Register as a Farmer');
       return redirect('Farmers/login');
 
     }
@@ -51,6 +51,7 @@ class UsersController extends Controller
         'password' => bcrypt(request('password'))
       ]);
       //redirect to homepage.
+      alert()->success('Congrats!', 'You successfully Register as a Buyer');
       return redirect('Buyers/login');
 
     }

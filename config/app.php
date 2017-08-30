@@ -165,6 +165,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Socieboy\Alerts\AlertServiceProvider::class,
         /*
          * Package Service Providers...
          */

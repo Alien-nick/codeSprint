@@ -7,10 +7,14 @@ use App\Buyers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use App\Http\AuthTraits\OwnsRecord;
 use Redirect;
 
 class BuyersController extends Controller
 {
+
+    use OwnsRecord;
+
 
     public function __construct()
     {
@@ -58,7 +62,9 @@ class BuyersController extends Controller
         $demands->user_id = auth()->id();
         $demands->order_status = 'approved';
         $demands->save();
+        alert()->success('Congrats!', 'You successfully Made An order');
         return $this->index();
+        //return $demands;
     }
 
     /**
@@ -71,6 +77,7 @@ class BuyersController extends Controller
     {
       return view('Buyers.show')->with('buyers', $buyers);
       //dd($demands);
+      //return $buyers;
     }
 
     /**
@@ -82,7 +89,11 @@ class BuyersController extends Controller
     public function edit($id)
     {
         $demands = Buyers::findorFail($id);
-        return view('Buyers.edit')->with('demands', $demands);
+        if($this->adminOrCurrentUserOwns($demands))
+        {
+          return view('Buyers.edit')->with('demands', $demands);
+        }
+      return  dd('You are not the right user');
     }
 
     /**
@@ -119,6 +130,7 @@ class BuyersController extends Controller
         $post->end_date_of_order = date('Y-m-d', strtotime($request->end_date_of_order));
         $post->order_status = 'approved';
         $post->user_id = auth()->id();
+        alert()->success('Congrats!', 'You successfully Edit and Update An order');
         $post->save();
         return $this->index();
     }
@@ -133,6 +145,7 @@ class BuyersController extends Controller
     {
         $demands = Buyers::find($id);
         $demands->delete();
+        alert()->error('Congrats!', 'You successfully Delete An order');
         return $this->index();
     }
 }

@@ -52,6 +52,7 @@ class ComposerStaticInitc29e2a84a3f55441de47d64679546a85
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Socieboy\\Alerts\\' => 16,
         ),
         'R' => 
         array (
@@ -178,6 +179,10 @@ class ComposerStaticInitc29e2a84a3f55441de47d64679546a85
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Socieboy\\Alerts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/socieboy/alerts/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -302,6 +307,7 @@ class ComposerStaticInitc29e2a84a3f55441de47d64679546a85
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\BuyersController' => __DIR__ . '/../..' . '/app/Http/Controllers/BuyersController.php',
+        'App\\Http\\Controllers\\CommentsController' => __DIR__ . '/../..' . '/app/Http/Controllers/CommentsController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\FarmersController' => __DIR__ . '/../..' . '/app/Http/Controllers/FarmersController.php',
         'App\\Http\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsersController.php',
@@ -2791,6 +2797,8 @@ class ComposerStaticInitc29e2a84a3f55441de47d64679546a85
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
         'SebastianBergmann\\ResourceOperations\\ResourceOperations' => __DIR__ . '/..' . '/sebastian/resource-operations/src/ResourceOperations.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Socieboy\\Alerts\\AlertServiceProvider' => __DIR__ . '/..' . '/socieboy/alerts/src/AlertServiceProvider.php',
+        'Socieboy\\Alerts\\Flash' => __DIR__ . '/..' . '/socieboy/alerts/src/Flash.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\Command\\Command' => __DIR__ . '/..' . '/symfony/console/Command/Command.php',
         'Symfony\\Component\\Console\\Command\\HelpCommand' => __DIR__ . '/..' . '/symfony/console/Command/HelpCommand.php',

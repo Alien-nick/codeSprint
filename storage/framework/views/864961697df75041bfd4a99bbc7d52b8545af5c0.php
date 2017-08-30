@@ -19,7 +19,8 @@
         </div> <!-- /container -->
 
       <?php echo $__env->make('templates.scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-
+      <?php echo $__env->make('Alerts::show', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+      <?php echo $__env->yieldContent('scripts'); ?>
 
 </body>
 </html>
