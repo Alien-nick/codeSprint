@@ -1,6 +1,8 @@
 @extends('templates.header')
 
   @section('content')
+<div class="container">
+
 
 
     <ol class='breadcrumb'>
@@ -10,7 +12,9 @@
         <li class='active'>Edit</li>
     </ol>
 
-    <h1 style="color:white;">Edit Demands</h1>
+      <div class="panel panel-default" style="padding:25px;">
+
+    <h1>Edit Demands</h1>
 
     <hr/>
 
@@ -21,7 +25,7 @@
 
     <!-- crop_name Form Input -->
         <div class="form-group{{ $errors->has('crop_name') ? ' has-error' : '' }}">
-            <label style="color:white;" class="control-label">Crop Name</label>
+            <label class="control-label">Crop Name</label>
 
             <input type="text" class="form-control" name="crop_type" value="{{ $inStocks->crop_name }}">
 
@@ -34,7 +38,7 @@
         </div>
 
         <div class="form-group{{ $errors->has('order_quantity') ? ' has-error' : '' }}">
-            <label style="color:white;" class="control-label">Order Quantity</label>
+            <label class="control-label">Order Quantity</label>
 
             <input type="number" class="form-control" name="order_quantity" value="{{ $inStocks->crop_quantity }}">
 
@@ -47,7 +51,7 @@
         </div>
 
         <div class="form-group{{ $errors->has('crop_estimate_reap_date') ? ' has-error' : '' }}">
-            <label style="color:white;" class="control-label">Crop Estimate Reap Date</label>
+            <label class="control-label">Crop Estimate Reap Date</label>
 
             <input type="date" class="form-control" name="end_date_of_order" value="{{ $inStocks->crop_estimate_reap_date }}">
 
@@ -78,6 +82,8 @@
         </div>
 
     </form>
+    </div>
+    </div>
 
 
 @endsection

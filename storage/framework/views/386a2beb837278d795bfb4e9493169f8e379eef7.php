@@ -2,8 +2,13 @@
 <link rel="stylesheet" href="/css/animate.css" type="text/css">
 <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" />
 <link rel="stylesheet" href="/css/styles.css" type="text/css" >
+
 <!--sweet alert  -->
 <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+
+<script src="/js/Chart.min.js">
+
+</script>
 
 
 <!-- CDN -->
@@ -24,7 +29,7 @@
     padding:0px 0px 80px 0px;
   }
 
-  panel
+
   {
     color:#333;
 

@@ -14,7 +14,7 @@ use App\Orders;
 
 class User extends Authenticatable
 {
-    use Notifiable, OwnsRecord;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.

@@ -49,6 +49,9 @@ Route::post('/Bids/{buyers}/create', 'BidsController@createBid');
 //Comments Route
 Route::post('/Buyers/{buyers}/comments', 'CommentsController@create_comment');
 
+//Stats Route
+Route::get('Stats/', 'StatsController@index');
+
 
 Route::get('/test', function(){
       $notifications=auth()->user()->unreadNotifications;

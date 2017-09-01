@@ -17,7 +17,7 @@
                   <input class="form-control" type="password" name="password" id="password">
             </div>
             <div class="form-group">
-                  <input class="btn btn-primary" type="submit" name="submit" id="submit" value="login">
+                  <input class="btn btn-custom" type="submit" name="submit" id="submit" value="login">
             </div>
         <?php echo $__env->make('templates.errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
           </form>

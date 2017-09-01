@@ -39,7 +39,7 @@
     <?php endif; ?>
 
     <div class="comments">
-            <ul class="list-group" style="padding:20px; background:url('/images/cherryBG.png'); border-radius:10px;">
+            <ul class="list-group" style="padding:20px; background:#555; border-radius:10px;">
               <h2 style="color:white;">Comments:</h2>
               <?php $__currentLoopData = $buyers->comments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $comment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 

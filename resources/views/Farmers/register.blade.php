@@ -1,14 +1,14 @@
 @extends('templates.header')
 
   @section('content')
-  <form class="form-group" action="/Buyers/register" method="post">
+  <form class="form-group" action="/Farmers/register" method="post">
 
       {{csrf_field()}}
     <div class="col-lg-4 col-lg-offset-4">
     <div class="panel panel-custom animated pulse" style="padding:25px 20px 80px 20px; opacity:0.9;">
 
         <div class="panel-heading">
-            <h2 class="animated bounceInDown" style="color:white; text-align:center;"> Register New Buyer Account </h2>
+            <h2 class="animated bounceInDown" style="color:white; text-align:center;"> Register New Farmer Account </h2>
         </div>
 
 
