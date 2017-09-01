@@ -14,7 +14,7 @@
 
             <?php echo $__env->yieldContent('content'); ?>
 
-              <hr>
+      
 
 
         </div> <!-- /container -->

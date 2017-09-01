@@ -1,7 +1,8 @@
   <?php $__env->startSection('content'); ?>
 
-  <div class="col-sm-8">
-      <h1>Sign In</h1>
+  <div class="col-lg-4 col-lg-offset-4">
+    <div class="panel panel-default" style="padding: 25px 25px 70px 25px;">
+      <h1 style="text-align:center" class="animated pulse">Sign In as Farmer</h1>
       <form action="/Farmers/signIn" method="post">
             <?php echo e(csrf_field()); ?>
 
@@ -18,6 +19,7 @@
             </div>
       <?php echo $__env->make('templates.errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
           </form>
+        </div>
           </div>
   <?php $__env->stopSection(); ?>
 

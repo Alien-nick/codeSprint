@@ -12,7 +12,7 @@
 
     <!-- Local CSS FILES -->
     <link rel="stylesheet" href="/css/styles.scss" type="text/css" >
-    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" /> -->
     <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="/css/animate.css" type="text/css" />
 
@@ -31,6 +31,7 @@ body
     color: white;
 
 }
+
 #footer
 {
 
@@ -52,7 +53,7 @@ body
 
 #home-section
 {
-    background:url('https://codesprint-nick24.c9users.io/assets/images/cherryBG.png') no-repeat;
+    background:url('/images/cherryBG.png') no-repeat;
     min-height: 720px;
     background-size: cover;
     background-attachment: fixed;
@@ -115,11 +116,13 @@ color:white;
 ::-moz-selection { /* Code for Firefox */
     color: white;
     background: rgba(167,14,51,0.5);
+    font-weight:bold;
 }
 
 ::selection {
     color: white;
     background: rgba(167,14,51,0.5);
+    font-weight:bold;
 }
 
 </style>
@@ -155,17 +158,14 @@ color:white;
 
 
 
+            <br>
 
+            <a class="btn btn-outline-light btn-sm" href="/Farmers/login" class="nav-link">Login as Farmer</a>
 
-                    <ul class="nav nav-pills">
-                     <li class="nav-item float-sm-left">
-                        <a class="btn btn-outline-light btn-sm" href="Farmers/login" class="nav-link">Login as Farmer</a>
-                    </li>
-                        &nbsp&nbsp
-                     <li class="nav-item float-sm-right">
-                        <a class="btn btn-outline-light btn-sm" href="Buyers/login" class="nav-link">Login as Buyer</a>
-                    </li>
-                    </ul>
+            &nbsp
+
+            <a class="btn btn-outline-light btn-sm float-sm-right" href="/Buyers/login" class="nav-link">Login as Buyer</a>
+
 
 
 
@@ -256,7 +256,7 @@ color:white;
                                              Not a farmer?
                                                       </div>
                                                       <div class="col-lg-3">
-                                             <a class="btn btn-outline-light btn-sm" href="Buyers/create_buyer"> Click Here</a>
+                                             <a class="btn btn-outline-light btn-sm" href="/buyers/register"> Click Here</a>
                                                     </div>
                                                   </div>
                                                   </div>
@@ -305,7 +305,7 @@ color:white;
         <div class="row text-center" style="opacity:0.9;">
   <div class="col-sm-6 col-md-4 col-lg-4 animated fadeInLeft bottom">
     <div class="thumbnail">
-      <img class="img-res" src="/images/game.png" alt="">
+      <img class="img-res" src="https://www.kris-co.nl/images/wizard/r_2.PNG" alt="">
       <div class="caption">
           <br>
         <h3>Effective Matching</h3>
@@ -331,7 +331,7 @@ color:white;
 
   <div class="col-sm-6 col-md-4 col-lg-4 animated fadeInRight bottom">
     <div class="thumbnail">
-      <img class="rounded-circle img-res" src="/images/game.png" alt="">
+      <img class="rounded-circle img-res" src="https://www.kris-co.nl/images/wizard/r_2.PNG" alt="">
       <div class="caption">
           <br>
         <h3>Effective Matching</h3>
@@ -347,17 +347,28 @@ color:white;
 </section>
 
 <!-- footer -->
-<section id="footer">
+<footer id="footer" class="bg-dark">
     <div class="container">
         <div class="row">
-            <div class="col text-center">
-                <div class="o-5">
-                    <br>
-                    <h1 class="display-4"> Contact Us </h1>
+            <div class="col-lg-6 text-center">
+                <div class="p-5">
+                    <h3 class="display-5"> Farmer's Paradise </h3>
                     <p class="lead">
-                        Mehhh
+                        Copyright &copy; 2017 Team Macros, All Rights Reserved.
+
                     </p>
-                    <br>
+
+                </div>
+            </div>
+
+             <div class="col-lg-6 text-center">
+                <div class="p-5">
+                    <h3 class="display-5"> Need Help? </h3>
+                    <p class="lead">
+                        Contact Us. We'll help in any way possible.
+                         <a class="mail" href="mailto:solutions@guyana.com">solutions@guyana.com</a>
+                    </p>
+
 
 
                 </div>
@@ -365,9 +376,8 @@ color:white;
 
         </div>
     </div>
-
-</section>
-
+    a
+</footer>
 
     <!-- Local SCRIPT FILES -->
     <script type="text/javascript" src="https://codesprint-nick24.c9users.io/assets/bootstrap4/js/bootstrap.min.js"></script>

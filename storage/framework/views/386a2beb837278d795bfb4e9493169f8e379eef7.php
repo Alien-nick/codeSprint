@@ -24,4 +24,10 @@
     padding:0px 0px 80px 0px;
   }
 
+  panel
+  {
+    color:#333;
+
+  }
+
 </style>

@@ -1,5 +1,7 @@
   <?php $__env->startSection('content'); ?>
 
+<div class="container">
+
 
     <ol class='breadcrumb'>
         <li><a href='/'>Home</a></li>
@@ -8,7 +10,10 @@
         <li class='active'>Edit</li>
     </ol>
 
-    <h1 style="color:white;">Edit Demands</h1>
+    <div class="panel panel-default" style="padding:25px;">
+
+
+    <h1>Edit Demand</h1>
 
     <hr/>
 
@@ -20,7 +25,7 @@
 
     <!-- crop_name Form Input -->
         <div class="form-group<?php echo e($errors->has('crop_type') ? ' has-error' : ''); ?>">
-            <label style="color:white;" class="control-label">Crop Name</label>
+            <label class="control-label">Crop Name</label>
 
             <input type="text" class="form-control" name="crop_type" value="<?php echo e($demands->crop_type); ?>">
 
@@ -33,7 +38,7 @@
         </div>
 
         <div class="form-group<?php echo e($errors->has('order_quantity') ? ' has-error' : ''); ?>">
-            <label style="color:white;" class="control-label">Order Quantity</label>
+            <label class="control-label">Order Quantity</label>
 
             <input type="number" class="form-control" name="order_quantity" value="<?php echo e($demands->order_quantity); ?>">
 
@@ -46,7 +51,7 @@
         </div>
 
         <div class="form-group<?php echo e($errors->has('end_date_of_order') ? ' has-error' : ''); ?>">
-            <label style="color:white;" class="control-label">Due Date</label>
+            <label class="control-label">Due Date</label>
 
             <input type="date" class="form-control" name="end_date_of_order" value="<?php echo e($demands->end_date_of_order); ?>">
 
@@ -58,7 +63,7 @@
 
         </div>
         <div class="form-group<?php echo e($errors->has('order_status') ? ' has-error' : ''); ?>">
-            <label style="color:white;" class="control-label">Order Status</label>
+            <label class="control-label">Order Status</label>
 
             <input type="text" class="form-control" name="order_status" value="<?php echo e($demands->order_status); ?>">
 
@@ -69,16 +74,17 @@
             <?php endif; ?>
 
         </div>
-
+<br>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-lg">
+            <button type="submit" class="btn btn-success btn-lg">
                 Update
             </button>
         </div>
 
     </form>
 
-
+</div>
+</div>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('templates.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

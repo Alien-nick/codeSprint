@@ -14,7 +14,7 @@
 
             @yield('content')
 
-              <hr>
+      
 
 
         </div> <!-- /container -->

@@ -2,8 +2,11 @@
 
   @section('content')
 
-  <div class="col-sm-8">
-      <h1>Sign In</h1>
+  <div class="col-lg-4 col-lg-offset-4">
+
+
+      <div class="panel panel-default" style="padding: 25px 25px 70px 25px;">
+        <h1 style="text-align:center" class="animated pulse">Sign In as Buyer</h1>
       <form action="/Buyers/signIn" method="post">
             {{csrf_field()}}
             <div class="form-group">
@@ -19,5 +22,6 @@
             </div>
         @include('templates.errors')
           </form>
+        </div>
           </div>
   @endsection
