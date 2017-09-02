@@ -27,11 +27,13 @@
                       <span class="badge">{{count(auth()->user()->unreadNotifications)}}</span>
                   </a>
                   <ul class="dropdown-menu" role="menu">
+                    <li>
                     @forelse(auth()->user()->unreadNotifications as $notification)
                     @include('templates.notification.'.snake_case(class_basename($notification->type)))
                     @empty
                     <a href="#">No Unread Notifications</a>
                     @endforelse
+                    </li>
                   </ul>
               </li>
                 <li class="dropdown">
