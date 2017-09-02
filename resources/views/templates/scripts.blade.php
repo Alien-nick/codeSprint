@@ -3,10 +3,9 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/Chart.min.js"></script>
 <script src="/js/custom.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.dropdown-toggle').dropdown();
-    });
-</script>
 <!--sweet alert  -->
 <script src="/js/sweetalert.js"></script>
+<script src="/js/notifications.js"></script>
+<script src="/js/app.js">
+
+</script>

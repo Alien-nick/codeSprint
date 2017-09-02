@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default " style="opacity:0.9;">
+  <nav class="navbar navbar-default " style="opacity:0.9;">
     <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -21,15 +21,17 @@
 
 
               <?php if(Auth::check()): ?>
-              <li class="dropdown">
+              <li class="dropdown" onclick="markNotificationAsRead()">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                       <span class="glyphicon glyphicon-globe"></span>
                       <span class="badge"><?php echo e(count(auth()->user()->unreadNotifications)); ?></span>
                   </a>
                   <ul class="dropdown-menu" role="menu">
-                    <?php $__currentLoopData = auth()->user()->unreadNotifications; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $notification): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php $__empty_1 = true; $__currentLoopData = auth()->user()->unreadNotifications; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $notification): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                     <?php echo $__env->make('templates.notification.'.snake_case(class_basename($notification->type)), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                    <a href="#">No Unread Notifications</a>
+                    <?php endif; ?>
                   </ul>
               </li>
                 <li class="dropdown">

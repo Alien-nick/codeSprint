@@ -7,14 +7,14 @@
           <script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
           @include('templates.css')
   </head>
-    <body>
+    <body id="app">
         @include('templates.nav')
 
         <div class="container theme-showcase" role="main">
 
             @yield('content')
 
-      
+
 
 
         </div> <!-- /container -->

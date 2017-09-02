@@ -1,8 +1,1 @@
-<!-- <a href="#">{{snake_case(class_basename($notification->type))}}</a> -->
-
-<a href="#">
-
-
-    Someone Bid on Your Demand <br>
-
-</a>
+<a href="/Buyers/{{$notification->data['buyers']['id']}}"><small>{{$notification->data['user']['name']}} bid on your Demand {{$notification->data['buyers']['crop_type']}}</small></a>

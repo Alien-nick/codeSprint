@@ -19,7 +19,12 @@
       <h5><?php echo e($buyers->order_status); ?></h5>
       </div>
       <div class="col-lg-1">
-        <input type="submit" name="bid" value="Bid" class="btn btn-danger btn-lg pull-left">
+        <form class="" action="/Bids/<?php echo e($buyers->id); ?>/create/" method="post">
+             <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+             <?php echo csrf_field(); ?>
+
+               <input type="submit" name="bid" value="Bid" class="btn btn-danger pull-left">
+           </form>
       </div>
 
     </div>

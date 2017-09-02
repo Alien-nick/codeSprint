@@ -1,28 +1,24 @@
 <?php
-
 namespace App\Notifications;
-
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Carbon\Carbon;
-
 class BidToDemands extends Notification
 {
     use Queueable;
-
-    protected $bids;
+    public $buyers;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($bids)
+    public function __construct($buyers)
     {
-        $this->bids = $bids;
+        $this->buyers = $buyers;
     }
-
     /**
      * Get the notification's delivery channels.
      *
@@ -33,32 +29,17 @@ class BidToDemands extends Notification
     {
         return ['database'];
     }
-    /**
-     * Get the array representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return array
-     */
+    public function toDatabase($notifiable)
+    {
+        return [
+            'buyers' => $this->buyers,
+            'user' => auth()->user()
+        ];
+    }
     public function toArray($notifiable)
     {
         return [
             //
-        ];
-    }
-
-    /**
-     * Get the Database representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return array
-     */
-    public function toDatabase($notifiable)
-    {
-        //dd($notifiable);
-        //'bidTime' => Carbon::now(),
-        return [
-            'bid' => $this->bids,
-            'user' => $notifiable
         ];
     }
 }

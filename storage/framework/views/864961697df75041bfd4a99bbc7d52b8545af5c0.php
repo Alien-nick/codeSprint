@@ -7,14 +7,14 @@
           <script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
           <?php echo $__env->make('templates.css', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   </head>
-    <body>
+    <body id="app">
         <?php echo $__env->make('templates.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
         <div class="container theme-showcase" role="main">
 
             <?php echo $__env->yieldContent('content'); ?>
 
-      
+
 
 
         </div> <!-- /container -->

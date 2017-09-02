@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default " style="opacity:0.9;">
+  <nav class="navbar navbar-default " style="opacity:0.9;">
     <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -21,15 +21,17 @@
 
 
               @if(Auth::check())
-              <li class="dropdown">
+              <li class="dropdown" onclick="markNotificationAsRead()">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                       <span class="glyphicon glyphicon-globe"></span>
                       <span class="badge">{{count(auth()->user()->unreadNotifications)}}</span>
                   </a>
                   <ul class="dropdown-menu" role="menu">
-                    @foreach(auth()->user()->unreadNotifications as $notification)
+                    @forelse(auth()->user()->unreadNotifications as $notification)
                     @include('templates.notification.'.snake_case(class_basename($notification->type)))
-                    @endforeach
+                    @empty
+                    <a href="#">No Unread Notifications</a>
+                    @endforelse
                   </ul>
               </li>
                 <li class="dropdown">

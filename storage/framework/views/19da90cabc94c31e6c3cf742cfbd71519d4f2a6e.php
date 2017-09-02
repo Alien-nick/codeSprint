@@ -1,8 +1,1 @@
-<!-- <a href="#"><?php echo e(snake_case(class_basename($notification->type))); ?></a> -->
-
-<a href="#">
-
-
-    Someone Bid on Your Demand <br>
-
-</a>
+<a href="/Buyers/<?php echo e($notification->data['buyers']['id']); ?>"><small><?php echo e($notification->data['user']['name']); ?> bid on your Demand <?php echo e($notification->data['buyers']['crop_type']); ?></small></a>
